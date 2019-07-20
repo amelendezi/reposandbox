@@ -1,0 +1,11 @@
+C:\amedev\projects\reposandbox\RepoSandbox\bin\Debug\netcoreapp2.2\RepoSandbox.deps.json
+C:\amedev\projects\reposandbox\RepoSandbox\bin\Debug\netcoreapp2.2\RepoSandbox.runtimeconfig.json
+C:\amedev\projects\reposandbox\RepoSandbox\bin\Debug\netcoreapp2.2\RepoSandbox.runtimeconfig.dev.json
+C:\amedev\projects\reposandbox\RepoSandbox\bin\Debug\netcoreapp2.2\RepoSandbox.dll
+C:\amedev\projects\reposandbox\RepoSandbox\bin\Debug\netcoreapp2.2\RepoSandbox.pdb
+C:\amedev\projects\reposandbox\RepoSandbox\obj\Debug\netcoreapp2.2\RepoSandbox.csprojAssemblyReference.cache
+C:\amedev\projects\reposandbox\RepoSandbox\obj\Debug\netcoreapp2.2\RepoSandbox.csproj.CoreCompileInputs.cache
+C:\amedev\projects\reposandbox\RepoSandbox\obj\Debug\netcoreapp2.2\RepoSandbox.AssemblyInfoInputs.cache
+C:\amedev\projects\reposandbox\RepoSandbox\obj\Debug\netcoreapp2.2\RepoSandbox.AssemblyInfo.cs
+C:\amedev\projects\reposandbox\RepoSandbox\obj\Debug\netcoreapp2.2\RepoSandbox.dll
+C:\amedev\projects\reposandbox\RepoSandbox\obj\Debug\netcoreapp2.2\RepoSandbox.pdb

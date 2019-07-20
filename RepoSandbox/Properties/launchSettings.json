@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RepoSandbox": {
+      "commandName": "Project",
+      "commandLineArgs": "db:\"C:\\Stuff\\connectionconfig.txt\""
+    }
+  }
+}
