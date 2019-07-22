@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using RepoSandbox.Common;
 using RepoSandbox.Logging;
+using RepoSandbox.Model;
 using RepoSandbox.Mysql;
 
 namespace RepoSandbox
@@ -11,9 +12,48 @@ namespace RepoSandbox
     public static void Main(string[] args)
     {
       var arguments = ConsoleArgumentParser.Parse(args);
-      TestNewOrCreate(arguments);
+      TestNewOrCreateWithStatementModel(arguments);
+
+      // TestNewOrCreate(arguments);
       //TestDbConnection(arguments);
-      Console.ReadKey();
+      // Console.ReadKey();
+    }
+
+    private static void TestNewOrCreateWithStatementModel(Arguments arguments)
+    {
+      var logger = new StringBuilderLogger();
+      var connectionManager = new MySqlConnectionManager(logger);
+      var dbConnectionConfig = GetConnectionConfig(arguments);
+      var mySqlConnection = connectionManager.GetConnection(dbConnectionConfig);
+      if(mySqlConnection != null)
+      {
+        CreateTableIfNotExistsStatement statement = new CreateTableIfNotExistsStatement(
+          "eror",
+          new TableColumnCollection(
+            new TableColumn[]
+            {
+              new TableColumn(
+                "Id",
+                new ColumnType("VARCHAR", 256),
+                true),
+              new TableColumn(
+                "Description",
+                new ColumnType("VARCHAR", 256),
+                true),
+              new TableColumn(
+                "Rating",
+                new ColumnType("INT", 11),
+                true)
+            }));
+
+        MySqlCommand command = new MySqlCommand(statement.Serialize(), mySqlConnection);
+        command.ExecuteNonQuery();
+        connectionManager.Disconnect();
+      }
+      else
+      {
+        Console.WriteLine("Connection failed");
+      }
     }
 
     private static void TestNewOrCreate(Arguments arguments)
